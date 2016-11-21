@@ -1,0 +1,33 @@
+<div class="container-fluid list">
+    <div class="main row">
+        <div class="col-md-8 ">
+
+            <div ng-repeat="event in events ">
+                <jables-event-panel event="event "></jables-event-panel>
+            </div>
+            <div ng-show="showNoEventsMsg()">
+                <br>
+                <br>
+                <br>
+                <a class="video-text ng-binding">{{message}}</a>
+                <br>
+                <br>
+                <div class="progress progress-striped active" ng-if="showSearchBar">
+                    <div class="progress-bar" style="width: 100%"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 ">
+            <div class="space-container ">
+                <h2 class="space-text ">Ad</h2>
+            </div>
+            <div class="space-container ">
+                <h2 class="space-text ">Ad</h2>
+            </div>
+            <div class="space-container ">
+                <h2 class="space-text ">Ad</h2>
+            </div>
+        </div>
+    </div>
+</div>

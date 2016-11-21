@@ -1,0 +1,87 @@
+<div class="video-block row">
+    <div ng-repeat="video in homeModel.featuredVideo">
+        <div class="video-item col-md-7">
+            <jables-video-panel class="video" video-obj="video"></jables-video-panel>
+        </div>
+        <div class="col-md-5">
+            <h1 class="video-title">{{video.title}}</h1>
+            <p class="video-text">{{video.description}}</p>
+        </div>
+    </div>
+    <div class="get-stores visible-xs">
+        <a href="https://itunes.apple.com/us/app/jables/id919349092" class="stores">
+            <img src="img/apple-store-bade.png" class="img-responsive" alt="">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.entertainment.jables" class="stores">
+            <img src="img/google-store-badge.png" class="img-responsive" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="main row">
+    <div class="col-md-8">
+        <h2 class="week">This Week</h2>
+        <div class="week-item" ng-repeat="event in homeModel.nextSevenDayEvents track by $index">
+            <a href="event-details.html" class="week-img">
+                <img ng-src="{{event.img_url}}" style="max-height: 100px; max-width: 100px;" class="img-responsive">
+            </a>
+            <div class="week-text">
+                <span class="week-title"><a href="#/event-details/{{event.id}}">{{event.title| limitTo:25}}</a><span> @ </span><a href="#/venue-details/{{event.venueId}}">{{event.venueTitle | limitTo:25}}</a></span>
+                <p class="week-subs">{{ event.start_date | date:"EEEE - MMM. d, yyyy - h:mm a"}} &nbsp;- &nbsp; {{event.city}}, {{event.state}}</p>
+                <p class="tag-btn">
+                    <span ng-if="event.promoted" class="price-tag">promoted</span>
+                    <span class="price-tag">{{event.pricesymbol}}</span>
+                    <span class="age-tag">{{event.category}}</span>
+                    <span class="video-tag" ng-if="event.video">Video</span>
+                </p>
+            </div>
+        </div>
+        <a href="#/the-list" class="see-more">See more</a>
+
+
+        <h2 class="week">Coming Soon</h2>
+        <div class="week-item" ng-repeat="event in homeModel.comingSoonEvents track by $index">
+            <a href="event-details.html" class="week-img">
+                <img ng-src="{{event.img_url}}" style="max-height: 100px; max-width: 100px;" class="img-responsive">
+            </a>
+            <div class="week-text">
+                <span class="week-title"><a href="#/event-details/{{event.id}}">{{event.title| limitTo:25}}</a><span> @ </span><a href="#/venue-details/{{event.venueId}}">{{event.venueTitle | limitTo:25}}</a></span>
+                <p class="week-subs">{{ event.start_date | date:"EEEE - MMM. d, yyyy - h:mm a"}} &nbsp;- &nbsp; {{event.city}}, {{event.state}}</p>
+                <p class="tag-btn">
+                    <span ng-if="event.promoted" class="price-tag">promoted</span>
+                    <span class="price-tag">{{event.pricesymbol}}</span>
+                    <span class="age-tag">{{event.category}}</span>
+                    <span class="video-tag" ng-if="event.video">Video</span>
+                </p>
+            </div>
+        </div>
+        <a href="#/the-list" class="see-more">See more</a>
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="space-container">
+            <h2 class="space-text">Ad</h2>
+        </div>
+        <div class="get-container">
+            <h2 class="get-text">Get the App</h2>
+            <div class="get-stores">
+                <a href="https://itunes.apple.com/us/app/jables/id919349092" class="stores">
+                    <img src="img/apple-store-bade.png" class="img-responsive" alt="">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.entertainment.jables" class="stores">
+                    <img src="img/google-store-badge.png" class="img-responsive" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="popular-container">
+            <h2 class="popular-text">Popular</h2>
+            <div class="popular-link">
+                <a href="#">The O’s</a>
+                <a href="#">G Love and the Special Sauce</a>
+                <a href="#">Wilco</a>
+                <a href="#">Moon Taxi</a>
+            </div>
+        </div>
+    </div>
+</div>

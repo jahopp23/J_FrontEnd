@@ -1,0 +1,29 @@
+<div class="event">
+    <div class="main row">
+        <section class="col-md-12">
+            <div class="week-item">
+                <div class="week-img">
+                    <img src="{{event.img_url}}" class="img-responsive" alt="week-img">
+                </div>
+                <div class="week-text">
+                    <h2 class="video-title">{{event.title}}</h2>
+                    <a href="#/venue-details/{{event.venueId}}" class="week-title">{{event.venueTitle}}</a>
+                    <p class="week-subs">{{ event.start_date | date:"EEEE - MMM. d, yyyy - h:mm a"}} &nbsp;- &nbsp; {{event.city}}, {{event.state}}</p>
+                    <p class="tag-btn"><span class="price-tag">{{event.pricesymbol}}</span><span class="age-tag">{{event.category}}</span><span class="video-tag" ng-if="event.video">Video</span></p>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="video-block row">
+            <button class="button_event first_but"><i class="star"></i>Interested</button>
+            <button class="button_event two_but" socialshare socialshare-provider="facebook" socialshare-text="I am interested in this event via Jables" socialshare-hashtags="angularjs, angular-socialshare" socialshare-url="{{pageUrl}}"><i class="face"></i>Share</button>
+            <div class="video-item col-md-12">
+                <jables-video-panel ng-if="event.video" class="video" video-obj="event.video"></jables-video-panel>
+            </div>
+            <div class="col-md-12">
+                <p class="video-text" style="font-size: 125%; line-height: 150%;">{{event.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

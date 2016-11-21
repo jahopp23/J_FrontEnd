@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jables</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato|Secular+One" rel="stylesheet">
+</head>
+
+<body ng-app="jables_app">
+    <div>
+        <header class="header row">
+            <nav class="navbar col-sm-12">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="logo" href="#/">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right cust-nav">
+                        <li><a href="#/">Home</a></li>
+                        <li><a href="#/the-list">The List</a></li>
+                        <li class="nav-link"><a href="#/jables-tv">Jables TV</a></li>
+                        <li>
+                            <form class="search">
+                                <input id="searchBox" type="search" name="search" class="input-search" value="" ng-model="searchKey">
+                                <input type="submit" name="submit-search" value onclick="window.location='#/search/'+document.getElementById('searchBox').value" class="submit-search">
+                            </form>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="index" ng-view=""></div>
+
+
+        <footer class="row">
+            <div class="panel-group col-sm-12" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default footer-list-block">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">About</a> </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    <a href="#">About Jables</a>
+                                </li>
+                                <li>
+                                    <a href="#">Investor Info</a>
+                                </li>
+                                <li>
+                                    <a href="#">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="#">News</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms of Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default footer-list-block">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+					Jables
+</a> </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    <a href="#">Venue Tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">Entertainer Tools</a>
+                                </li>
+                                <li>
+                                    <a href="#">Advertise</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default footer-list-block">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+					Promote Events
+</a> </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    <a href="#">Promote all events for a venue</a>
+                                </li>
+                                <li>
+                                    <a href="#">Promote an event</a>
+                                </li>
+                                <li>
+                                    <a href="#">Have event listed on front page</a>
+                                </li>
+                                <li>
+                                    <a href="#">Event info correction</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default footer-list-block social pull-right">
+                    <div class="panel-body">
+                        <ul>
+                            <!-- <li><a href="https://itunes.apple.com/us/app/jables/id919349092" class="stores"><img src="img/apple-store-bade.png" alt=""></a></li> -->
+                            <!--
+                            <li>
+    <img src="img/logo.png" style="width:50px;height:auto;" alt="">
+</li>
+-->
+                            <!-- <li><a href="https://play.google.com/store/apps/details?id=com.entertainment.jables" class="stores" class="stores"><img src="img/google-store-badge.png" alt=""></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- keys -->
+    <script src="keys.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/libs/angular-animate.min.js"></script>
+    <script src="js/libs/angular-route.min.js"></script>
+    <script src="js/libs/angular-aria.min.js"></script>
+    <script src="js/libs/angular-messages.min.js"></script>
+    <script src="js/libs/angular-resource.min.js"></script>
+    <script src="js/libs/angular-sanitize.min.js"></script>
+    <!-- facebook share-->
+    <script src="js/libs/angular-socialshare.min.js"></script>
+    <!-- ui bootstrap library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+    <!-- color picker-->
+    <script src="js/libs/angular-color-picker.js"></script>
+    <!-- parse js Library -->
+    <script src="//www.parsecdn.com/js/parse-1.6.7.min.js"></script>
+    <!-- momentjs for time manipulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js">
+    </script>
+    <!--main scripts-->
+    <script src="js/misc/constants.js"></script>
+    <script src="js/app.js"></script>
+    <!--controllers scripts-->
+    <script src="js/controllers/home.js"></script>
+    <script src="js/controllers/jablesTV.js"></script>
+    <script src="js/controllers/theList.js"></script>
+    <script src="js/controllers/eventDetails.js"></script>
+    <script src="js/controllers/venueDetails.js"></script>
+    <script src="js/controllers/eventSearch.js"></script>
+    <!-- directives -->
+    <script src="js/directives/jablesDropdown.js"></script>
+    <script src="js/directives/jablesPagination.js"></script>
+    <script src="js/directives/jablesEventPanel.js"></script>
+    <script src="js/directives/jablesVideoPanel.js"></script>
+    <script src="js/directives/jablesDropdownCheckbox.js"></script>
+    <script src="js/directives/jablesDropdownDatepicker.js"></script>
+    <!-- services -->
+    <script src="js/services/jablesDataService.js"></script>
+</body>
+
+</html>

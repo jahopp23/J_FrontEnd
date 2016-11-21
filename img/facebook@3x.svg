@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="18px" viewBox="0 0 9 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="event-details" transform="translate(-180.000000, -262.000000)" fill="#FFFFFF">
+            <path d="M185.456,279.586 L181.818,279.586 L181.818,270.793 L180,270.793 L180,267.762 L181.818,267.762 L181.818,265.943 C181.818,263.472 182.845,262 185.76,262 L188.188,262 L188.188,265.031 L186.671,265.031 C185.536,265.031 185.46,265.455 185.46,266.245 L185.456,267.762 L188.206,267.762 L187.884,270.793 L185.456,270.793 L185.456,279.586" id="facebook"></path>
+        </g>
+    </g>
+</svg>

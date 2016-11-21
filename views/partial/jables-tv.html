@@ -1,0 +1,15 @@
+<div class="container-fluid jables-tv">
+
+    <article class="video-section clearfix" ng-repeat="video in jablesTVModel.videos track by $index">
+        <div class="video-block">
+            <div class="video-item col-md-7">
+                <jables-video-panel class="video" video-obj="video"></jables-video-panel>
+            </div>
+            <div class="col-md-5">
+                <h1 class="video-title">{{video.title}}</h1>
+                <hr>
+                <p class="video-text">{{video.description}}</p>
+            </div>
+        </div>
+    </article>
+</div>

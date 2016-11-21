@@ -1,0 +1,61 @@
+<div class="container-fluid list">
+    <div class="main row">
+        <div class="col-md-12">
+            <form class="list-form">
+                <p class="list-select">
+                    <label for="sort">SORT</label>
+                    <select class="form-control" id="price" ng-model="sortByList.selected" ng-change="optionsChanged=true" ng-options="option.name for option in sortByList.options track by option.name"> </select>
+                </p>
+                <p class="list-select list-select-margin">
+                    <label for="category">CATEGORY</label>
+                    <select class="form-control" id="price" ng-model="categoriesList.selected" ng-change="optionsChanged=true" ng-options="option.name for option in categoriesList.options track by option.name"> </select>
+                </p>
+                <p class="list-select">
+                    <label for="price">PRICE</label>
+                    <select class="form-control" id="price" ng-model="pricesList.selected" ng-change="optionsChanged=true" ng-options="option.name for option in pricesList.options track by option.name"> </select>
+                </p>
+                <p class="list-select list-select-margin">
+                    <label for="distance ">Location</label>
+                    <select class="form-control" id="price" ng-model="locationsList.selected" ng-change="optionsChanged=true" ng-options="option.name for option in locationsList.options track by option.name"> </select>
+                </p>
+                <p class="list-select">
+                    <label for="date">DATE</label>
+                    <input class="form-control" ng-model="selectedDate" type="date" />
+                </p>
+                <div class="row">
+                    <div class="search-col col-md-1">
+                        <button type='submit' ng-show="optionsChanged" ng-click="search()" class="search-button">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-8 ">
+
+            <div ng-repeat="event in eventList ">
+                <jables-event-panel event="event "></jables-event-panel>
+            </div>
+            <div ng-show="showNoEventsMsg()">
+                <p class="week-subs ng-binding">{{message}}</p>
+            </div>
+
+        </div>
+        <div class="col-md-4 ">
+            <div class="space-container ">
+                <h2 class="space-text ">Ad</h2>
+            </div>
+            <div class="space-container ">
+                <h2 class="space-text ">Ad</h2>
+            </div>
+            <div class="space-container ">
+                <h2 class="space-text ">Ad</h2>
+            </div>
+        </div>
+        <div class="col-md-12 ">
+            <div class="pagination-container ">
+                <div class="pagination-sub-container ">
+                    <jables-pagination total-items="totalItems " num-pages-shown="numPagesShown " num-items-per-page="numItemsPerPage " current-page="currentPage "></jables-pagination>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

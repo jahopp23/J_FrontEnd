@@ -1,0 +1,19 @@
+<div class="dropdown-container" ng-class="{ show: listVisible }">
+    <div class="dropdown-display" ng-click="toggle();" ng-class="{ clicked: listVisible }">
+        <span ng-if="!isPlaceholder">{{display}}</span>
+        <span class="placeholder" ng-if="isPlaceholder">{{placeholder}}</span>
+        <i ng-class="{'fa fa-chevron-down':!listVisible, 'fa fa-chevron-up':listVisible}"></i>
+    </div>
+    <div class="dropdown-list">
+        <div>
+
+            <div ng-repeat="item in list" class="checkbox" ng-click="item.selected = !item.selected">
+                <label>
+                    <input type="checkbox" ng-model="item.selected" ng-click="item.selected = !item.selected" /> 
+                    <span class="label-text" ng-bind="item.name"></span>
+                </label>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="jables-home" transform="translate(-1192.000000, -35.000000)" fill="#00A9EB">
+            <polygon id="down-arrow" transform="translate(1196.000000, 37.500000) scale(1, -1) translate(-1196.000000, -37.500000) " points="1196 35 1200 40 1192 40 "></polygon>
+        </g>
+    </g>
+</svg>

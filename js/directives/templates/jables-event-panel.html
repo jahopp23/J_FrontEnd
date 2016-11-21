@@ -1,0 +1,17 @@
+<div class="jables-event-panel-container">
+    <div class="week-item">
+        <a href="event-details.html" class="week-img">
+            <img ng-src="{{event.img_url}}" style="max-height: 100px; max-width: 100px;" class="img-responsive">
+        </a>
+        <div class="week-text">
+            <span class="week-title"><a href="#/event-details/{{event.id}}">{{event.title| limitTo:25}}</a><span> @ </span><a href="#/venue-details/{{event.venueId}}">{{event.venueTitle | limitTo:25}}</a></span>
+            <p class="week-subs">{{ event.start_date | date:"EEEE - MMM. d, yyyy - h:mm a"}} &nbsp;- &nbsp; {{event.city}}, {{event.state}}</p>
+            <p class="tag-btn">
+                <span ng-if="event.promoted" class="price-tag">promoted</span>
+                <span class="price-tag">{{event.pricesymbol}}</span>
+                <span class="age-tag">{{event.category}}</span>
+                <span class="video-tag" ng-if="event.video">Video</span>
+            </p>
+        </div>
+    </div>
+</div>
